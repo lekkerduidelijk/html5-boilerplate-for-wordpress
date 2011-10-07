@@ -13,13 +13,13 @@ get_header(); ?>
 				<h2><?php the_title(); ?></h2>
 			</header>
 			
-			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+			<?php the_content('<p class="serif">'. __('Read the rest of this page &raquo;','html5-boilerplate-for-wordpress') .'</p>'); ?>
 			
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			
 		</article>
 	<?php endwhile; endif; ?>
-	<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+	<?php edit_post_link(__('Edit this entry.','html5-boilerplate-for-wordpress'), '<p>', '</p>'); ?>
 	
 	<?php comments_template(); ?>
 	
